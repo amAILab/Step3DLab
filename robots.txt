@@ -1,4 +1,2 @@
 User-agent: *
-Disallow: /Step3DLab/
-
-# Preview is intentionally closed from indexing until approved for hosting.
+Disallow: /
