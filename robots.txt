@@ -1,5 +1,4 @@
 User-agent: *
-Allow: /Step3D/
-Disallow: /Step3D/photos_do_not_touch/
+Disallow: /Step3DLab/
 
-Sitemap: https://amailab.github.io/Step3D/sitemap.xml
+# Preview is intentionally closed from indexing until approved for hosting.
