@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /Step3D/
+Disallow: /Step3D/photos_do_not_touch/
+
+Sitemap: https://amailab.github.io/Step3D/sitemap.xml

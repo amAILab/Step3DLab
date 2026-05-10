@@ -1,0 +1,13 @@
+{
+  "name": "Step3D",
+  "short_name": "Step3D",
+  "description": "3D-печать, 3D-моделирование, сканирование и прототипирование в Москве.",
+  "start_url": "/Step3D/",
+  "scope": "/Step3D/",
+  "display": "standalone",
+  "background_color": "#f5f5f2",
+  "theme_color": "#f5f5f2",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "64x64", "type": "image/svg+xml" }
+  ]
+}
