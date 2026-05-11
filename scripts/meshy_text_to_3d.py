@@ -57,7 +57,14 @@ def main() -> int:
 
     api_key = os.environ.get("MESHY_API_KEY")
     if not api_key:
-        raise SystemExit("Set MESHY_API_KEY in the environment. Example: MESHY_API_KEY=msy_... python3 scripts/meshy_text_to_3d.py 'prompt'")
+        secret_env = Path.home() / ".openclaw" / "secrets" / "meshy.env"
+        if secret_env.exists():
+            for line in secret_env.read_text(encoding="utf-8").splitlines():
+                if line.startswith("MESHY_API_KEY="):
+                    api_key = line.split("=", 1)[1].strip()
+                    break
+    if not api_key:
+        raise SystemExit("Set MESHY_API_KEY in the environment or ~/.openclaw/secrets/meshy.env. Example: MESHY_API_KEY=msy_... python3 scripts/meshy_text_to_3d.py 'prompt'")
     if len(args.prompt) > 600:
         raise SystemExit("Prompt is longer than Meshy limit: 600 characters")
 
